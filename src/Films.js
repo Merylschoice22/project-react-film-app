@@ -13,14 +13,18 @@ const Films = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Films</h2>
-      <p>Here are films</p>
-      <div>
-        {films.map((f, index) => (
-          <p key={index}>{f.title}</p>
-        ))}
-      </div>
+    <div className=" list-card">
+      {films.map((f, index) => (
+        <div className="item " key={index}>
+          <h3 className="details">{f.title}</h3>
+          <div className="details">
+            <p>Director: {f.director}</p>
+            <p>Producer: {f.producer}</p>
+            <p>Release Date: {f.release_date}</p>
+            <p>Rotten Tomato Score: {f.rt_score}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

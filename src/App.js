@@ -3,10 +3,11 @@ import Films from "./Films";
 
 function App() {
   return (
-    <div>
-      <header>
-        <Films />
+    <div className="container">
+      <header className="container">
+        <h1>Studio Ghibli Films</h1>
       </header>
+      <Films />
     </div>
   );
 }
