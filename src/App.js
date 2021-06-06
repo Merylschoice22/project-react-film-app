@@ -1,5 +1,6 @@
 import "./index.css";
 import Films from "./Films";
+import Search from "./Search";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <header className="container">
         <h1>Studio Ghibli Films</h1>
       </header>
+      <Search />
       <Films />
     </div>
   );
