@@ -1,7 +1,28 @@
-import React from "react"
+import React, { useEffect, useState } from "react";
 
 const Films = () => {
-    return ()
-}
+  const [films, setFilms] = useState([]);
 
-export default Films
+  useEffect(() => {
+    fetch("https://ghibliapi.herokuapp.com/films")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setFilms(data);
+      });
+  }, []);
+
+  return (
+    <div>
+      <h2>Films</h2>
+      <p>Here are films</p>
+      <div>
+        {films.map((f, index) => (
+          <p key={index}>{f.title}</p>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Films;
