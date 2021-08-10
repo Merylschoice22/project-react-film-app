@@ -32,7 +32,9 @@ const Films = () => {
           </div>
         </div>
       ))}
-      <button onClick={getStart}>Load More</button>
+      {/* <button onClick={getStart}>Load More</button> */}
+
+      <LoadMoreBtn getStart={getStart} />
     </div>
   );
 };
