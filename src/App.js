@@ -1,3 +1,4 @@
+import React from "react";
 import "./index.css";
 import Films from "./Films";
 import Search from "./Search";
